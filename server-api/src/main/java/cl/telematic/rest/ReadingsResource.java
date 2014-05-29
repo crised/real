@@ -18,9 +18,9 @@ public interface ReadingsResource {
 
     @GET
     @Path("/{device}")
-    Readings getDeviceStats(@NotNull @PathParam("device") String name);
+    Readings getDeviceStats(@NotNull @PathParam("device") String deviceName);
 
     @POST
     @Path("/{device}")
-    Response save(@NotNull @PathParam("device") Long deviceId, @NotNull @Valid Readings readings);
+    Response save(@NotNull @PathParam("device") String deviceName, @NotNull @Valid Readings readings);
 }
